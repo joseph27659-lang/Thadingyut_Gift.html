@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>မမအတွက် အထူးလက်ဆောင် </title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;color:white;text-align:center;
+ font-family:system-ui,sans-serif;
+ background:radial-gradient(circle at top,#60358c,#211139 55%,#090613);
+ padding:24px 15px;overflow-x:hidden
+}
+.card{
+ max-width:520px;margin:20px auto;padding:25px 18px;
+ border:1px solid #ffffff35;border-radius:26px;
+ background:#ffffff0d;box-shadow:0 15px 50px #0005
+}
+.tag{color:#ffdf9c;letter-spacing:2px;font-size:13px}
+h1{
+ color:#ffe0a4;font-size:clamp(27px,7vw,39px);
+ line-height:1.6;text-shadow:0 0 20px #ffb8d088
+}
+p{line-height:2;color:#eee1ff}
+.moon{
+ margin:30px auto;width:95px;height:95px;border-radius:50%;
+ background:#fff0bb;box-shadow:0 0 45px #ffe5a0;
+ position:relative
+}
+.moon:after{
+ content:"";position:absolute;left:25px;top:-8px;
+ width:88px;height:88px;border-radius:50%;background:#352050
+}
+.lanterns{font-size:35px;margin:20px 0;animation:float 3s infinite}
+@keyframes float{50%{transform:translateY(-9px)}}
+button{
+ border:0;border-radius:30px;padding:13px 19px;
+ margin:6px;font-size:15px;font-weight:bold;cursor:pointer
+}
+.open{background:linear-gradient(90deg,#ffe3a0,#ffb8d3);color:#351747}
+.read{background:#ffffff15;border:1px solid #ffffff55;color:white}
+.message{
+ display:none;margin-top:20px;padding:20px;
+ border:1px solid #ffdf9c66;border-radius:20px;
+ background:#ffffff0b;line-height:2
+}
+footer{font-size:12px;color:#cbb9e6;margin:28px 0}
+.heart{color:#ff9fcb}
+</style>
+</head>
+
+<body>
+<div class="card">
+ <div class="tag">A LITTLE GIFT FOR YOU </div>
+
+ <h1>မမအတွက်<br>အထူးလက်ဆောင်လေး </h1>
+
+ <p>
+ ကြယ်လေးတွေလို မျှော်လင့်ချက်တွေ တောက်ပပြီး<br>
+ လမင်းလို စိတ်အေးချမ်းမှုတွေ ပြည့်နေပါစေ။
+ </p>
+
+ <div class="moon"></div>
+ <div class="lanterns">  </div>
+
+ <p>မမအတွက် သီးသန့်ဖန်တီးထားတဲ့<br>အမှတ်တရလက်ဆောင်လေးပါနော် </p>
+
+ <button class="open" onclick="openGift()">
+  လက်ဆောင်ဖွင့်မယ်
+ </button>
+
+ <button class="read" onclick="readLetter()">
+  စာလေးဖတ်မယ်
+ </button>
+
+ <div class="message" id="gift">
+  <h2> မမအတွက် ဆုတောင်းလေး</h2>
+  မမရဲ့နေ့ရက်တိုင်း ပျော်ရွှင်မှုတွေနဲ့ ပြည့်နေပါစေ။<br>
+  ကြိုးစားသမျှ အောင်မြင်ပြီး အိပ်မက်လေးတွေ<br>
+  တစ်ခုပြီးတစ်ခု အကောင်အထည်ပေါ်လာပါစေ။<br><br>
+  မမရဲ့အပြုံးလေးတွေ အမြဲတမ်း လှပနေပါစေ။ 
+ </div>
+
+ <div class="message" id="letter">
+  <h2> မမအတွက် စာလေး</h2>
+  လူတစ်ယောက်ရဲ့ တန်ဖိုးဆိုတာ<br>
+  ပြည့်စုံနေခြင်းမှာ မဟုတ်ဘူး။<br>
+  ကိုယ့်ပုံစံအတိုင်း လှပပြီး<br>
+  ကိုယ့်အလင်းရောင်နဲ့ တောက်ပနေတာပါ။ <br><br>
+  မမလည်း အမြဲတမ်း စိတ်ချမ်းသာပြီး<br>
+  ကိုယ်လိုချင်တဲ့ အိပ်မက်တွေ ပြည့်ဝပါစေနော်။<br>
+  <span class="heart">မမအတွက် ခင်မင်လေးစားစွာဖြင့် </span>
+ </div>
+</div>
+
+<footer>
+ Made with  for someone special<br>
+ မမအတွက် အမှတ်တရလက်ဆောင်လေး 
+</footer>
+
+<script>
+function openGift(){
+ const el=document.getElementById('gift');
+ el.style.display='block';
+ el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function readLetter(){
+ const el=document.getElementById('letter');
+ el.style.display='block';
+ el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+</body>
+</html>
